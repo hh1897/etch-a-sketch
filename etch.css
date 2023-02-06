@@ -1,16 +1,43 @@
 ﻿body
 {
-    
+    background-color: grey;
 }
-.box {
-    background-color: blue;
-    width: 1.5rem;
-    height: 1.5rem;
+#gridParent {
+    display: flex;
+    align-content: center;
 }
-.box:hover {
-    background-color: orange;
+#grid {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  
 }
 .row {
+    
     display: flex;
     flex-direction: row;
+    padding: 0px;
+    width: 100%;
+}
+.box {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    padding: 0px;
+   
+}
+#userInputParent {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+#userInputDiv {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    align-content: center;
+    text-align: center;
+    
 }
