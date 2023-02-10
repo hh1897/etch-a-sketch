@@ -1,6 +1,7 @@
 ﻿body {
-    background-color: tan;
-    font-family: Arial, sans-serif;
+    background-color: #a8d0e6;
+    font-family: monospace, sans-serif;
+    color: #f76c6c;
 }
 h1 {
     display: flex;
@@ -15,8 +16,12 @@ h1 {
 #userOptions {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
     padding-right: 2rem;
+    background-color: #b39bc8;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
 }
 
 #gridParent {
@@ -56,4 +61,11 @@ h1 {
 }
 #clear {
     margin-top: 1rem;
+}
+button {
+    font-family: monospace;
+    background-color: #f76c6c;
+    border-color: white;
+    border-radius: 1rem;
+    margin: 0.5rem;
 }
