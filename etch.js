@@ -1,6 +1,7 @@
 // JavaScript source code
 
 const numOfSquares = document.getElementById("userInput").value;
+let userColourChoice;
 
 function grid(numOfSquares) {
     
@@ -23,17 +24,19 @@ function grid(numOfSquares) {
             const box = document.createElement("div");
             box.className = "box";
             box.id = "box" + i;
-            box.addEventListener("click", function() { changeColour(row.id, box.id) });
+            box.addEventListener("click", function() { changeColour(row.id, box.id, userColourChoice) });
             document.getElementsByClassName("row")[rowCount].appendChild(box)[i];
         }
         rowCount++;
     }
 }
-function changeColour(rowId, boxId) {
+function changeColour(rowId, boxId, userColourChoice) {
     let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
-    box.style.backgroundColor = "green";
+    box.style.backgroundColor = userColourChoice;
     
 }
-
+function colourChoice(colour) {
+    userColourChoice = colour;
+}
 grid(numOfSquares);
 
