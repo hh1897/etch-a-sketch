@@ -2,6 +2,7 @@
 
 const numOfSquares = document.getElementById("userInput").value;
 let userColourChoice;
+let isDrawing = false;
 
 function grid(numOfSquares) {
     
@@ -10,6 +11,7 @@ function grid(numOfSquares) {
     const grid = document.createElement("div");
     grid.id = "grid";
     document.getElementById("gridParent").appendChild(grid);
+    grid.addEventListener("click", function () { draw() });
 
     for (m = 0; m < numOfSquares; m++) {
 
@@ -24,19 +26,29 @@ function grid(numOfSquares) {
             const box = document.createElement("div");
             box.className = "box";
             box.id = "box" + i;
-            box.addEventListener("click", function() { changeColour(row.id, box.id, userColourChoice) });
+            box.addEventListener("mouseover", function() { changeColour(row.id, box.id, userColourChoice) });
             document.getElementsByClassName("row")[rowCount].appendChild(box)[i];
         }
         rowCount++;
     }
 }
 function changeColour(rowId, boxId, userColourChoice) {
-    let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
-    box.style.backgroundColor = userColourChoice;
-    
+    if (isDrawing == true) {
+        let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
+        box.style.backgroundColor = userColourChoice;
+    }
 }
 function colourChoice(colour) {
     userColourChoice = colour;
 }
+function draw() {
+    if (isDrawing == false) {
+        isDrawing = true;
+    }
+    else {
+        isDrawing = false;
+    }
+}
+
 grid(numOfSquares);
 
