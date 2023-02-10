@@ -14,6 +14,7 @@ function grid(numOfSquares) {
 
         const row = document.createElement("div");
         row.className = "row";
+        row.id = "row" + m;
         document.getElementById("grid").appendChild(row)[m];
         
 
@@ -21,14 +22,18 @@ function grid(numOfSquares) {
         for (i = 0; i < numOfSquares; i++) {
             const box = document.createElement("div");
             box.className = "box";
+            box.id = "box" + i;
+            box.addEventListener("click", function() { changeColour(row.id, box.id) });
             document.getElementsByClassName("row")[rowCount].appendChild(box)[i];
         }
         rowCount++;
     }
 }
-function changeColour() {
-    document.getElementsByClassName("box").style.backgroundColour = "green";
-    return false;
+function changeColour(rowId, boxId) {
+    let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
+    box.style.backgroundColor = "green";
+    
 }
 
 grid(numOfSquares);
+
