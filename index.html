@@ -9,20 +9,25 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
-    <!--<button id="create"onclick="grid(20);">Create</button> -->
-    <div id="userInputParent">
-        <div id="userInputDiv">
-            <p>Enter the number of squares on one side:</p>
-            <input type="number" id="userInput" min="1" max="100" />
-            <button id="numOfSquares" onclick="grid(userInput.value);">Enter</button>
+    <div id="optionsAndGrid">
+        <div id="userOptions">
+            <div id="userInputParent">
+                <div id="userInputDiv">
+                    <p>Enter the number of squares on one side:</p>
+                    <input type="number" id="userInput" min="1" max="100" />
+                    <button id="numOfSquares" onclick="grid(userInput.value); deactivateBtn();">Enter</button>
+                </div>
+            </div>
+            <div id="userColourChoice">
+                <p>Choose a colour:</p>
+                <input type="color" id="userChoice" />
+                <button id="btnColourChoice" onclick="colourChoice(userChoice.value);">Enter</button>
+            </div>
+            <button id="pencil" onclick="colourChoice(userChoice.value)">Pencil</button>
+            <button id="eraser" onclick="colourChoice('#FFFFFF');">Eraser</button>
+            <button id="clear" onclick="clearGrid();">New Grid</button>
         </div>
+        <div id="gridParent"></div>
     </div>
-    <div id="userColourChoice">
-        <p>Choose a colour:</p>
-        <input type="color" id="userChoice" />
-        <button id="btnColourChoice" onclick="colourChoice(userChoice.value);">Enter</button>
-    </div>
-
-    <div id="gridParent"></div>
 </body>
 </html>
