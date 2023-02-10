@@ -3,6 +3,7 @@
 const numOfSquares = document.getElementById("userInput").value;
 let userColourChoice = "#000000";
 let isDrawing = false;
+let gridLines = true;
 
 
 
@@ -71,6 +72,7 @@ function clearGrid() {
 function deactivateBtn() {
     document.getElementById("numOfSquares").disabled = true;
 }
+
 
 grid(numOfSquares);
 
