@@ -4,6 +4,7 @@ const numOfSquares = document.getElementById("userInput").value;
 let userColourChoice = "#000000";
 let isDrawing = false;
 let gridLines = true;
+let rainbowPencil = false;
 
 
 
@@ -42,13 +43,18 @@ function grid(numOfSquares) {
 }
    
 function changeColour(rowId, boxId) {
-    if (isDrawing == true) {
+    if (isDrawing == true && rainbowPencil == false) {
         let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
         box.style.backgroundColor = userColourChoice;
+    }
+    if (isDrawing == true && rainbowPencil == true) {
+        let box = document.getElementById(rowId).getElementsByClassName("box")[boxId];;
+        box.style.backgroundColor = rainbowColour();
     }
 }
 function colourChoice(colour) {
     userColourChoice = colour;
+    rainbowPencil = false;
 }
 function draw(box) {
     if (isDrawing == false) {
@@ -72,6 +78,23 @@ function clearGrid() {
 function deactivateBtn() {
     document.getElementById("numOfSquares").disabled = true;
 }
+function rainbowColour() {
+    let colour = '#';
+    let letters = '0123456789ABCDEF';
+    for (let i = 0; i < 6; i++) {
+        colour += letters[Math.floor(Math.random() * 16)];
+    }
+    return colour;
+}
+function rainbowOn() {
+    if (rainbowPencil == false) {
+        rainbowPencil = true;
+    }
+    else {
+        rainbowPencil = false;
+    }
+}
+
 
 
 grid(numOfSquares);
