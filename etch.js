@@ -22,6 +22,7 @@ function grid(numOfSquares) {
         row.className = "row";
         row.id = "row" + m;
         document.getElementById("grid").appendChild(row)[m];
+        
 
 
         // Create row
@@ -35,6 +36,7 @@ function grid(numOfSquares) {
             box.style.width = size + "px";
 
             box.addEventListener("click", function () { draw(box) });
+            
             box.addEventListener("mouseover", function () { changeColour(row.id, box.id) });
             document.getElementsByClassName("row")[rowCount].appendChild(box)[i];
         }
@@ -59,7 +61,12 @@ function colourChoice(colour) {
 function draw(box) {
     if (isDrawing == false) {
         isDrawing = true;
-        box.style.backgroundColor = userColourChoice;
+        if (rainbowPencil == false) {
+            box.style.backgroundColor = userColourChoice;
+        }
+        else {
+            box.style.backgroundColor = rainbowColour();
+        }
     }
     else {
         isDrawing = false;
@@ -67,6 +74,7 @@ function draw(box) {
 }
 function boxSize(numOfSquares) {
     let length = 450 / numOfSquares;
+    length = Math.floor(length);
     return length;
 }
 function clearGrid() {
@@ -90,12 +98,12 @@ function rainbowOn() {
     if (rainbowPencil == false) {
         rainbowPencil = true;
     }
-    else {
-        rainbowPencil = false;
-    }
+}
+function colourIdentifier() {
+
 }
 
 
 
-grid(numOfSquares);
+
 
