@@ -29,12 +29,13 @@ h1 {
     display: flex;
     justify-content: right;
     align-items: center;
+    
 }
 #grid {
     
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 0rem;
   
 }
 .row {
