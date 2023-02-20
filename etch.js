@@ -19,8 +19,8 @@ function grid(numOfSquares) {
     document.getElementById("gridParent").appendChild(grid);
 
     // This prevents input exceeding range. Is placed here otherwise clearGrid() does not work.
-    if (numOfSquares > 100 || numOfSquares < 1) {
-        alert("The grid range is 1 to 100. Please enter new number.");
+    if (numOfSquares > 40 || numOfSquares < 1) {
+        alert("The grid range is 1 to 40. Please enter new number.");
         return;
     }
 
@@ -40,25 +40,24 @@ function grid(numOfSquares) {
             box.id = "box" + i;
 
             let size = boxSize(numOfSquares);
-            box.style.height = size + "px";
-            
-            box.style.maxHeight = size + "px";
-            box.style.width = size + "px";
-            
-            box.style.maxWidth = size + "px";
+            size = size + "px";
 
-            row.style.height = size + "px";
-            row.style.minHeight = size + "px";
-            row.style.maxHeight = size + "px";
-            
+            box.style.height = size;
+            box.style.maxHeight = size;
+            box.style.width = size;
+            box.style.maxWidth = size;
+
+            row.style.height = size;
+            row.style.minHeight = size;
+            row.style.maxHeight = size;
 
             box.addEventListener("click", function () { draw(box) });
-            
             box.addEventListener("mouseover", function () { changeColour(row.id, box.id) });
             document.getElementsByClassName("row")[rowCount].appendChild(box)[i];
         }
         rowCount++;
     }
+    deactivateBtn();
 }
    
 function changeColour(rowId, boxId) {
