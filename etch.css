@@ -29,11 +29,6 @@ h1 {
     margin: 1rem;
     color: white;
 }
-
-#userColourChoice {
-    
-}
-
 #gridParent {
     display: flex;
     justify-content: center;
@@ -45,16 +40,11 @@ h1 {
     background-color: #f8e9a1;
 }
 #grid {
-    
     display: flex;
     flex-direction: column;
     padding: 0rem;
     height: 620px;
-    width: 620px;
-   
-    
-   
-  
+    width: 620px; 
 }
 .row {
     
@@ -71,8 +61,6 @@ h1 {
     border: solid;
     border-width: 0.01rem;
     border-color: grey;
-    
-   
 }
 #userInputParent {
     display: flex;

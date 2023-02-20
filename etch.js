@@ -5,13 +5,10 @@ let userColourChoice = "#000000";
 let isDrawing = false;
 let rainbowPencil = false;
 let gridLines = true;
-
+let currentGrid;
 
 
 function grid(numOfSquares) {
-
-   
-
     let rowName = "row";
     let rowCount = 0;
     const grid = document.createElement("div");
@@ -31,8 +28,6 @@ function grid(numOfSquares) {
         row.id = "row" + m;
         document.getElementById("grid").appendChild(row)[m];
         
-
-
         // Create row
         for (i = 0; i < numOfSquares; i++) {
             const box = document.createElement("div");
@@ -98,8 +93,6 @@ function clearGrid() {
     grid.remove();
     gridCreated = false;
     document.getElementById("numOfSquares").disabled = false;
-
-  
 }
 function deactivateBtn() {
     document.getElementById("numOfSquares").disabled = true;
@@ -115,11 +108,9 @@ function rainbowColour() {
 function rainbowOn() {
     if (rainbowPencil == false) {
         rainbowPencil = true;
-        
     }
 }
 function gridLinesOn() {
-        
     let grid = document.getElementById("grid");
     let boxes = document.getElementById(grid.id).getElementsByClassName("box");;
 
@@ -139,8 +130,5 @@ function gridLinesOn() {
         gridLines = false;
     }
 }
-
-
-
 
 
