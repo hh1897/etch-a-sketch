@@ -2,9 +2,9 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <script src="etch.js" defer></script>
-    <link rel="stylesheet" href="etch.css" />
+    <link rel="stylesheet" href="etch.css">
     <title>Etch-A-Sketch</title>
 </head>
 <body>
@@ -12,25 +12,28 @@
     <div id="optionsAndGrid">
         <div id="userOptions">
             <div id="userInputParent">
+                <!--User Grid Size Option-->
                 <div id="userInputDiv">
                     <p>Grid Size:</p>
-                    <input type="number" id="userInput" min="1" max="40" />
+                    <input type="number" id="userInput" min="1" max="40">
                     <button id="numOfSquares" onclick="grid(userInput.value);">Enter</button>
                 </div>
             </div>
+            <!--Pencil Colour Choice-->
             <div id="userColourChoice">
                 <p>Choose a colour:</p>
-                <input type="color" id="userChoice" />
+                <input type="color" id="userChoice">
                 <button id="btnColourChoice" onclick="colourChoice(userChoice.value);">Enter</button>
             </div>
+            <!--Buttons-->
             <button id="pencil" onclick="colourChoice(userChoice.value)">Pencil</button>
             <button id="rainbowPencil" onclick="rainbowOn()">Rainbow Pencil</button>
             <button id="eraser" onclick="colourChoice('#FFFFFF');">Eraser</button>
             <button id="gridLines" onclick="gridLinesOn();">Grid Lines</button>
             <button id="clear" onclick="clearGrid();">New Grid</button>
         </div>
+        <!--Start of Grid-->
         <div id="gridParent"></div>
-        
     </div>
 </body>
 </html>
