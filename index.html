@@ -8,14 +8,14 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <h1>Etch-A-Sketch</h1>
+    <h1><span class="h1BackgroundColour">Etch-A-Sketch</span></h1>
     <div id="optionsAndGrid">
         <div id="userOptions">
             <div id="userInputParent">
                 <div id="userInputDiv">
                     <p>Grid Size:</p>
-                    <input type="number" id="userInput" min="1" max="100" />
-                    <button id="numOfSquares" onclick="grid(userInput.value); deactivateBtn();">Enter</button>
+                    <input type="number" id="userInput" min="1" max="40" />
+                    <button id="numOfSquares" onclick="grid(userInput.value);">Enter</button>
                 </div>
             </div>
             <div id="userColourChoice">
@@ -30,6 +30,7 @@
             <button id="clear" onclick="clearGrid();">New Grid</button>
         </div>
         <div id="gridParent"></div>
+        
     </div>
 </body>
 </html>

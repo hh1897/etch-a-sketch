@@ -7,6 +7,10 @@
 h1 {
     display: flex;
     justify-content: center;
+
+}
+.h1BackgroundColour {
+    background-color: white;
 }
 #optionsAndGrid {
     display: flex;
@@ -47,6 +51,7 @@ h1 {
     padding: 0rem;
     height: 620px;
     width: 620px;
+   
     
    
   
@@ -88,4 +93,7 @@ button {
     border-radius: 1rem;
     margin: 0.5rem;
     color: white;
+}
+p {
+    font-weight: bold;
 }
