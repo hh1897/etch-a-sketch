@@ -1,29 +1,32 @@
 ﻿body {
-    background-color: #a8d0e6;
+    background-color: #a8d0e6; /*Blue*/
     font-family: monospace, sans-serif;
-    color: #f76c6c;
+    color: #f76c6c; /*Pink*/
     padding: 0px;
 }
+/*Text Styling*/
 h1 {
     display: flex;
     justify-content: center;
-
 }
 .h1BackgroundColour {
     background-color: white;
 }
+p {
+    font-weight: bold;
+}
+/*Options and Grid, Styling and Positioning*/
 #optionsAndGrid {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    
+    align-items: flex-start;  
 }
 #userOptions {
     display: flex;
     flex-direction: column;
     padding-right: 2rem;
-    background-color: #b39bc8;
+    background-color: #b39bc8; /*Purple*/
     border-radius: 1rem;
     padding: 1rem;
     margin: 1rem;
@@ -37,7 +40,7 @@ h1 {
     border-radius: 12px;
     height: 630px;
     width: 630px;
-    background-color: #f8e9a1;
+    background-color: #f8e9a1; /*Yellow*/
 }
 #grid {
     display: flex;
@@ -47,7 +50,6 @@ h1 {
     width: 620px; 
 }
 .row {
-    
     display: flex;
     flex-direction: row;
     padding: 0px;
@@ -62,6 +64,7 @@ h1 {
     border-width: 0.01rem;
     border-color: grey;
 }
+/*User Input*/
 #userInputParent {
     display: flex;
     width: 10rem;
@@ -71,6 +74,7 @@ h1 {
     flex-direction: column;
     width: 10rem;
 }
+/*Buttons*/
 #clear {
     margin-top: 1rem;
 }
@@ -81,7 +85,4 @@ button {
     border-radius: 1rem;
     margin: 0.5rem;
     color: white;
-}
-p {
-    font-weight: bold;
 }
