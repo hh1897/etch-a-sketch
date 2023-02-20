@@ -3,8 +3,8 @@
 const numOfSquares = document.getElementById("userInput").value;
 let userColourChoice = "#000000";
 let isDrawing = false;
-let gridLines = true;
 let rainbowPencil = false;
+let gridLines = true;
 
 
 
@@ -97,10 +97,30 @@ function rainbowColour() {
 function rainbowOn() {
     if (rainbowPencil == false) {
         rainbowPencil = true;
+        
     }
 }
-function colourIdentifier() {
+function gridLinesOn() {
+        
+    let grid = document.getElementById("grid");
+    let boxes = document.getElementById(grid.id).getElementsByClassName("box");;
 
+    for (i = 0; i < boxes.length; i++) {
+        if (gridLines == false) {
+            boxes[i].style.borderColor = "black";
+        }
+        else {
+            boxes[i].style.borderColor = "transparent";
+        }
+    }
+    
+
+    if (gridLines == false) {
+        gridLines = true;
+    }
+    else {
+        gridLines = false;
+    }
 }
 
 
