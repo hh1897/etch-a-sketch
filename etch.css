@@ -29,6 +29,8 @@ h1 {
     display: flex;
     justify-content: right;
     align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
     
 }
 #grid {
@@ -52,7 +54,7 @@ h1 {
     padding: 0px;
     border: solid;
     border-width: 0.01rem;
-    border-color: black;
+    border-color: grey;
     
    
 }
