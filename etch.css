@@ -2,6 +2,7 @@
     background-color: #a8d0e6;
     font-family: monospace, sans-serif;
     color: #f76c6c;
+    padding: 0px;
 }
 h1 {
     display: flex;
@@ -27,17 +28,23 @@ h1 {
 
 #gridParent {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 12px;
-    
+    height: 650px;
+    width: 650px;
+    background-color: #f8e9a1;
 }
 #grid {
     
     display: flex;
     flex-direction: column;
     padding: 0rem;
+    height: 600px;
+    width: 600px;
+    
+   
   
 }
 .row {

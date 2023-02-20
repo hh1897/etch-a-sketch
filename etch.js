@@ -10,9 +10,7 @@ let gridLines = true;
 
 function grid(numOfSquares) {
 
-    // set background colour of frame box of grd 
-    let frame = document.getElementById("gridParent");
-    frame.style.backgroundColor = "#f8e9a1";
+    
 
     let rowName = "row";
     let rowCount = 0;
@@ -37,7 +35,16 @@ function grid(numOfSquares) {
 
             let size = boxSize(numOfSquares);
             box.style.height = size + "px";
+            
+            box.style.maxHeight = size + "px";
             box.style.width = size + "px";
+            
+            box.style.maxWidth = size + "px";
+
+            row.style.height = size + "px";
+            row.style.minHeight = size + "px";
+            row.style.maxHeight = size + "px";
+            
 
             box.addEventListener("click", function () { draw(box) });
             
@@ -77,8 +84,8 @@ function draw(box) {
     }
 }
 function boxSize(numOfSquares) {
-    let length = 450 / numOfSquares;
-    length = Math.floor(length);
+    let length = 600 / numOfSquares;
+    //length = Math.floor(length);
     return length;
 }
 function clearGrid() {
@@ -87,9 +94,7 @@ function clearGrid() {
     gridCreated = false;
     document.getElementById("numOfSquares").disabled = false;
 
-    // get rid of yellow frame
-    let frame = document.getElementById("gridParent");
-    frame.style.backgroundColor = "transparent";
+  
 }
 function deactivateBtn() {
     document.getElementById("numOfSquares").disabled = true;
