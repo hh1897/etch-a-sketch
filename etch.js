@@ -10,13 +10,19 @@ let gridLines = true;
 
 function grid(numOfSquares) {
 
-    
+   
 
     let rowName = "row";
     let rowCount = 0;
     const grid = document.createElement("div");
     grid.id = "grid";
     document.getElementById("gridParent").appendChild(grid);
+
+    // This prevents input exceeding range. Is placed here otherwise clearGrid() does not work.
+    if (numOfSquares > 100 || numOfSquares < 1) {
+        alert("The grid range is 1 to 100. Please enter new number.");
+        return;
+    }
 
 
     for (m = 0; m < numOfSquares; m++) {
@@ -84,7 +90,7 @@ function draw(box) {
     }
 }
 function boxSize(numOfSquares) {
-    let length = 600 / numOfSquares;
+    let length = 620 / numOfSquares;
     //length = Math.floor(length);
     return length;
 }
